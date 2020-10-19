@@ -1,11 +1,8 @@
 #ifndef C_PROPERTIES_H
 #define C_PROPERTIES_H
+#include <uchar.h>
 
-struct properties {
-    const char * key;
-    const char * value;
-    const struct properties * children;
-};
+typedef struct properties_st properties;
 
 /**
  * parse properties file
@@ -13,8 +10,8 @@ struct properties {
  * p : properties
  * */
 
-struct properties properties_create();
+properties properties_create();
 
-int properties_parse (const char * file_name,struct properties * p);
+int properties_parse(const char *file_name, properties *p);
 
 #endif //C_PROPERTIES_H

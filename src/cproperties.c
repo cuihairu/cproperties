@@ -1,7 +1,7 @@
 #include "cproperties.h"
 #include <wchar.h>
 
-struct properties {
+struct properties_object {
     const wchar_t * key;
     wchar_t * value;
     properties_t * children;

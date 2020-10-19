@@ -1,8 +1,11 @@
 #ifndef C_PROPERTIES_H
 #define C_PROPERTIES_H
 #include <uchar.h>
-
-typedef struct properties properties_t;
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+typedef struct properties_object properties_t;
 
 /**
  * parse properties file
@@ -13,5 +16,9 @@ typedef struct properties properties_t;
 properties_t properties_create();
 
 int properties_parse(const char *file_name, properties_t *p);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //C_PROPERTIES_H

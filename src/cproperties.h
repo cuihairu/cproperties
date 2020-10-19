@@ -2,7 +2,7 @@
 #define C_PROPERTIES_H
 #include <uchar.h>
 
-typedef struct properties_st properties;
+typedef struct properties properties_t;
 
 /**
  * parse properties file
@@ -10,8 +10,8 @@ typedef struct properties_st properties;
  * p : properties
  * */
 
-properties properties_create();
+properties_t properties_create();
 
-int properties_parse(const char *file_name, properties *p);
+int properties_parse(const char *file_name, properties_t *p);
 
 #endif //C_PROPERTIES_H

@@ -1,17 +1,18 @@
 #include "cproperties.h"
 #include <wchar.h>
 
-struct properties_st {
+struct properties {
     const wchar_t * key;
     wchar_t * value;
-    properties * children;
+    properties_t * children;
 };
 
-properties properties_create(){
-    
+properties_t properties_create(){
+
+    return
 }
 
-int properties_parse (const char * file_name,properties * p){
+int properties_parse (const char * file_name,properties_t * p){
     if(file_name == NULL){
         return -1;
     }

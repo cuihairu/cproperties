@@ -3,4 +3,4 @@ project(cproperties C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_library(cproperties cproperties.c cproperties.h)
+add_library(cproperties src/cproperties.c src/cproperties.h)
